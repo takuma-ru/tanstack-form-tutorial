@@ -1,7 +1,9 @@
 import { useCallback } from "react";
 import { useRoute } from "./hooks/useRoute";
 import One from "./route/one";
-import "./App.css"
+import Two from "./route/two";
+
+import "./App.css";
 
 const App = () => {
   const { path, navigate } = useRoute();
@@ -18,6 +20,8 @@ const App = () => {
         );
       case "/one":
         return <One />;
+      case "/two":
+        return <Two />;
       case "/about":
         return (
           <div>

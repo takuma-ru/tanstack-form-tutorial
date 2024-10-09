@@ -1,9 +1,17 @@
 import { useForm } from "@tanstack/react-form";
+import { zodValidator } from "@tanstack/zod-form-adapter";
+import { z } from "zod";
 
-const One = () => {
+const Two = () => {
   const form = useForm({
     defaultValues: {
       name: "",
+    },
+    validatorAdapter: zodValidator(),
+    validators: {
+      onChange: z.object({
+        name: z.string().min(1),
+      }),
     },
     onSubmit: (values) => {
       window.alert(values.value);
@@ -21,6 +29,9 @@ const One = () => {
       >
         <form.Field
           name="name"
+          validators={{
+            onChange: z.string().min(3),
+          }}
           children={(field) => {
             return (
               <input
@@ -40,4 +51,4 @@ const One = () => {
   );
 };
 
-export default One;
+export default Two;
