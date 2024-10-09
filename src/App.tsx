@@ -4,6 +4,7 @@ import One from "./route/one";
 import Two from "./route/two";
 
 import "./App.css";
+import Three from "./route/Three";
 
 const App = () => {
   const { path, navigate } = useRoute();
@@ -16,12 +17,15 @@ const App = () => {
             <h1>Home</h1>
             <button onClick={() => navigate("/one")}>Go to One</button>
             <button onClick={() => navigate("/two")}>Go to Two</button>
+            <button onClick={() => navigate("/three")}>Go to Three</button>
           </div>
         );
       case "/one":
         return <One />;
       case "/two":
         return <Two />;
+      case "/three":
+        return <Three />;
       case "/about":
         return (
           <div>
