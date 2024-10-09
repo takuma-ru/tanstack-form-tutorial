@@ -28,7 +28,7 @@ const App = () => {
         return <Two />;
       case "/three":
         return <Three />;
-      case "four":
+      case "/four":
         return <Four />;
       case "/about":
         return (
