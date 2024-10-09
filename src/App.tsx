@@ -15,7 +15,7 @@ const App = () => {
           <div>
             <h1>Home</h1>
             <button onClick={() => navigate("/one")}>Go to One</button>
-            <button onClick={() => navigate("/about")}>Go to About</button>
+            <button onClick={() => navigate("/two")}>Go to Two</button>
           </div>
         );
       case "/one":

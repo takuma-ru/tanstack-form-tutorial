@@ -14,13 +14,13 @@ const Two = () => {
       }),
     },
     onSubmit: (values) => {
-      window.alert(values.value);
+      window.alert(JSON.stringify(values.value, null));
     },
   });
 
   return (
     <main>
-      <h1>Captor.01 : 超基本的な使い方</h1>
+      <h3>Captor03 : Zodを使ってバリデーションを設定する方法</h3>
       <form
         onSubmit={(e) => {
           e.preventDefault();
