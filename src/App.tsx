@@ -2,9 +2,10 @@ import { useCallback } from "react";
 import { useRoute } from "./hooks/useRoute";
 import One from "./route/one";
 import Two from "./route/two";
+import Three from "./route/three";
 
 import "./App.css";
-import Three from "./route/Three";
+import Four from "./route/four";
 
 const App = () => {
   const { path, navigate } = useRoute();
@@ -18,6 +19,7 @@ const App = () => {
             <button onClick={() => navigate("/one")}>Go to One</button>
             <button onClick={() => navigate("/two")}>Go to Two</button>
             <button onClick={() => navigate("/three")}>Go to Three</button>
+            <button onClick={() => navigate("/four")}>Go to Four</button>
           </div>
         );
       case "/one":
@@ -26,6 +28,8 @@ const App = () => {
         return <Two />;
       case "/three":
         return <Three />;
+      case "four":
+        return <Four />;
       case "/about":
         return (
           <div>
