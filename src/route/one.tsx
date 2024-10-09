@@ -27,6 +27,7 @@ const One = () => {
                 id={field.name}
                 name={field.name}
                 value={field.state.value}
+                autoComplete="off"
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
               />
